@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment1</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("https://images.pexels.com/photos/531321/pexels-photo-531321.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #Container{
+            box-sizing: border-box;
+            width: 40vw;
+            box-shadow: 0px 0px 10px white;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #Container input{
+            box-sizing: border-box;
+            width: 250px;
+            height: 25px;
+            margin: 20px;
+        }
+        #Container button{
+            width: 150px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        function showHidPsw(){
+            var pass=document.getElementById("psw")
+            var type=pass.type;
+            if(type=='password'){
+                pass.type='text';
+            }
+            else{
+                pass.type='password'
+            }
+            var btn=document.getElementById("show");
+            var btnvalue=btn.innerText;
+            if(btnvalue=="Show password"){
+                btn.innerText="Hide passowrd"
+            }
+            else{
+                btn.innerText="Show password"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="Container">
+        <input type="password" id="psw"/>
+        <button id="show" onclick="showHidPsw();">Show password</button>
+    </div>
+</body>
+</html>

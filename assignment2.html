@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2 11-11-21</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        #screen{
+            margin:50px ;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+        }
+        #buttons button{
+            border: none;
+            background-color: royalblue;
+            color: white;
+            font-size: large;
+            font-weight: bold;
+            height: 30px;
+            width: 200px;
+            margin: 10px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px black;
+        }
+        #buttons button:active{
+            height: 30px;
+            width: 200px;
+            margin: 10px;
+            transform: scale(0.96);
+        }
+    </style>
+    <script>
+        function goodmorning(){
+            var display=document.getElementById("display");
+            display.innerText="Good Morning";
+            var adddisplay=document.getElementById("adddisplay")
+            adddisplay.innerText=" Mukul Gupta"
+            display.style.color="red"
+            adddisplay.style.color="green"
+        }
+        function goodafternoon(){
+            var display=document.getElementById("display");
+            display.innerText="Good Afternoon";
+            var adddisplay=document.getElementById("adddisplay")
+            adddisplay.innerText=" Mukul Gupta"
+            display.style.color="red"
+            adddisplay.style.color="green"
+        }
+        function goodevening(){
+            var display=document.getElementById("display");
+            display.innerText="Good Evening";
+            var adddisplay=document.getElementById("adddisplay")
+            adddisplay.innerText=" Mukul Gupta"
+            display.style.color="red"
+            adddisplay.style.color="green"
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="screen">
+            <span id="display">Hello, Mukul</span><span id="adddisplay"></span>
+        </div>
+        <div id="buttons">
+            <button id="goodmorning" onclick="goodmorning();">Good Morning</button>
+            <button id="goodafternoon" onclick="goodafternoon();">Good Afternoon</button>
+            <button id="goodevening" onclick="goodevening();">Good Evening</button>
+        </div>
+    </div>
+</body>
+</html>
